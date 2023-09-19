@@ -19,7 +19,7 @@ public class DogServiceList implements DogService {
     }
 
     @Override
-    public Dog getDog(int id) {
+    public Dog getDog(Integer id) {
         if (id >= this.dogs.size()) {
             return this.dogs.get(id);
         } else return null;
@@ -50,8 +50,8 @@ public class DogServiceList implements DogService {
     }
 
     @Override
-    public String removeDog(int id) {
-        if (dogs.remove(id) != null) {
+    public String removeDog(Integer id) {
+        if (dogs.remove(id.intValue()) != null) {
             return "Dog deleted";
         } else {
             return "Error, dog not found";

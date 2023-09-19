@@ -8,7 +8,7 @@ public interface DogService {
 
     Dog createDog(Dog d);
 
-    Dog getDog(int id);
+    Dog getDog(Integer id);
 
     List<Dog> getAll();
 
@@ -19,6 +19,6 @@ public interface DogService {
             Integer age
     );
 
-    String removeDog(int id);
+    String removeDog(Integer id);
 
 }

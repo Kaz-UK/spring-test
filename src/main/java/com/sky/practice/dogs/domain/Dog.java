@@ -3,6 +3,7 @@ package com.sky.practice.dogs.domain;
 import javax.persistence.Entity;
 import javax.persistence.*;
 
+// @Entity creates the link to the database tables
 @Entity
 public class Dog {
 

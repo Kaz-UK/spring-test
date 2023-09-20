@@ -1,5 +1,6 @@
 package com.sky.practice.dogs.services;
 
+import com.sky.practice.dogs.domain.Dog;
 import com.sky.practice.dogs.domain.Toy;
 import com.sky.practice.dogs.repo.ToyRepo;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,7 @@ public class ToyService {
         return this.repo.save(t);
     }
 
-    public List<Toy>getToys() {
+    public List<Toy>getAllToys() {
         return this.repo.findAll();
     }
 

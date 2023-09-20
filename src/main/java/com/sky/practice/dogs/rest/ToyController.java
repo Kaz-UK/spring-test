@@ -1,8 +1,11 @@
 package com.sky.practice.dogs.rest;
 
+import com.sky.practice.dogs.domain.Dog;
 import com.sky.practice.dogs.domain.Toy;
 import com.sky.practice.dogs.services.ToyService;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -17,12 +20,12 @@ public class ToyController {
     }
 
     @PostMapping("/create")
-    public Toy createToy(@RequestBody Toy t) {
-        return this.service.createToy(t);
+    public ResponseEntity<Toy> createToy(@RequestBody Toy t) {
+        return new ResponseEntity<>(this.service.createToy(t), HttpStatus.CREATED);
     }
 
-    @GetMapping("/get")
-    public List<Toy>getToys() {
-        return this.service.getToys();
+    @GetMapping("/getAll")
+    public List<Toy>getAllToys() {
+        return this.service.getAllToys();
     }
 }
